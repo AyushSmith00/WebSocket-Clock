@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Time Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        #timeDisplayContainer {
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 1px solid #c5daee;
+        }
+        h1 {
+            color: #2c3e50; 
+            margin-bottom: 20px;
+            font-size: 2.8em;
+        }
+        #timeDisplay {
+            font-size: 5em; 
+            font-weight: bold;
+            color: #27ae60; 
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+        .status {
+            font-size: 1em;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+        .note {
+            margin-top: 25px;
+            font-size: 0.95em;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <div id="timeDisplayContainer">
+        <h1>Current Time in Hazaribag:</h1>
+        <p id="timeDisplay">Connecting...</p>
+        <p id="connectionStatus" class="status">WebSocket Status: Disconnected</p>
+        <p class="note">Time updates without page refresh using WebSockets!</p>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
